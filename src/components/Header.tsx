@@ -48,7 +48,7 @@ const Header = () => {
                 size="icon"
                 asChild
               >
-                <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
+                <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label} className="rounded-full">
                   <link.icon className="h-5 w-5" />
                 </a>
               </Button>
@@ -59,7 +59,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden rounded-full"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -74,7 +74,7 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-mono text-sm uppercase tracking-wide hover:underline underline-offset-4"
+                  className="font-mono text-sm uppercase tracking-wide hover:underline underline-offset-4 rounded-full"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
@@ -87,6 +87,7 @@ const Header = () => {
                     variant="ghost"
                     size="icon"
                     asChild
+                    className="rounded-full"
                   >
                     <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
                       <link.icon className="h-5 w-5" />
